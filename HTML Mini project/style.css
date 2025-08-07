@@ -1,0 +1,36 @@
+*{
+    margin-left: 5;
+    padding: 5;
+    box-sizing: border-box;
+    background-color: rgb(243, 224, 199);
+}
+
+.heading{
+    text-align: center;
+    font-family: cursive;
+}
+
+.food{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.recipe{
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.recipe h2{
+    text-align: center;
+    font-family: monospace;
+}
+
+.recipe h3{
+    font-family: monospace;
+}
+
+.recipe ul, li{
+    list-style-type: square;
+    font-family: monospace;
+}
