@@ -97,6 +97,12 @@
 .recipe ol {
     list-style-type: decimal;
 }
+.footer{
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(243, 224, 199);
+    font-family: monospace;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
