@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sweetpie</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1 class="heading">We crave for something sweet</h1>
 
@@ -17,7 +19,9 @@
         <div class="card">
             <img src="https://i.pinimg.com/736x/f4/de/a3/f4dea3e8cbb21d792ca452be26e88c4a.jpg" alt="Cheese Cake">
             <div class="container">
-                <p>Cheesecake is a popular dessert known for its rich, creamy texture and sweet, tangy flavor. It typically consists of a cheese-based filling (often cream cheese, but sometimes ricotta or cottage cheese) and a crust made from crushed cookies or graham crackers. </p>
+                <p>Cheesecake is a popular dessert known for its rich, creamy texture and sweet, tangy flavor. It
+                    typically consists of a cheese-based filling (often cream cheese, but sometimes ricotta or cottage
+                    cheese) and a crust made from crushed cookies or graham crackers. </p>
                 <a href="./menu/CheeseCake.html">Cheese Cake</a>
             </div>
         </div>
@@ -25,15 +29,20 @@
         <div class="card">
             <img src="https://i.pinimg.com/1200x/28/16/8c/28168c6f54f32f22d68578c172484d55.jpg" alt="Donuts">
             <div class="container">
-                <p>Donuts are a type of fried dough, typically ring-shaped with a hole in the center, and often enjoyed as a sweet treat. They come in various forms, including glazed, filled, and twisted, and are a popular choice for breakfast or snacks.</p>
+                <p>Donuts are a type of fried dough, typically ring-shaped with a hole in the center, and often enjoyed
+                    as a sweet treat. They come in various forms, including glazed, filled, and twisted, and are a
+                    popular choice for breakfast or snacks.</p>
                 <a href="./menu/PaneerTikka.html">Donuts</a>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://scientificallysweet.com/wp-content/uploads/2020/02/IMG_8134-er-789x1024.jpg" alt="Brownie">
+            <img src="https://scientificallysweet.com/wp-content/uploads/2020/02/IMG_8134-er-789x1024.jpg"
+                alt="Brownie">
             <div class="container">
-                <p>A brownie is a small, square-shaped chocolate baked good, often described as a cross between a cake and a cookie. They are known for their dense, fudgy or cakey texture and rich chocolate flavor. Brownies can be plain or contain additions like nuts, chocolate chips, or frosting. </p>
+                <p>A brownie is a small, square-shaped chocolate baked good, often described as a cross between a cake
+                    and a cookie. They are known for their dense, fudgy or cakey texture and rich chocolate flavor.
+                    Brownies can be plain or contain additions like nuts, chocolate chips, or frosting. </p>
                 <a href="./menu/Brownie.html">Brownie</a>
             </div>
         </div>
@@ -41,17 +50,30 @@
         <div class="card">
             <img src="https://i.pinimg.com/736x/26/65/ae/2665aee2c46ccfd2e197bdc67a8f05e7.jpg" alt="Rasmalai">
             <div class="container">
-                <p>Ras malai, also known as rasamalei, or roshmalai, is a dessert that originated in the Bengal region of the Indian subcontinent. The dessert is called roshmalai in Bengali, ras malai in Hindi, and rasa malei in Odia. It is popular in India, Bangladesh and Pakistan.</p>
+                <p>Ras malai, also known as rasamalei, or roshmalai, is a dessert that originated in the Bengal region
+                    of the Indian subcontinent. The dessert is called roshmalai in Bengali, ras malai in Hindi, and rasa
+                    malei in Odia. It is popular in India, Bangladesh and Pakistan.</p>
                 <a href="./menu/rasmalai.html">Rasmalai</a>
             </div>
 
         </div>
     </div>
+    <a href="add-recipe.html" class="add-recipe-btn">+</a>
 
     <div class="footer">
         <p>© 2025 Recipe App. All rights reserved.</p>
         <p>Created by <a href="https://github.com/BeingMudita">BeingMudita</a>
     </div>
     <script src="script.js"></script>
+
+    <script>
+        fetch('http://localhost:3001/get-recipes')
+            .then(res => res.json())
+            .then(data => {
+                document.querySelector('.cards-container').innerHTML = data.cards.join('');
+            })
+            .catch(err => console.error(err));
+    </script>
 </body>
+
 </html>
