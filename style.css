@@ -104,6 +104,10 @@
     font-family: monospace;
 }
 
+.footer a{
+    color: black;
+    text-decoration: none;
+}
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .cards-container {
