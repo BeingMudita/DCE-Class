@@ -133,25 +133,3 @@
     border-radius: 5px;
     font-size: 16px;
 }
-
-.add-recipe-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #f57c00;
-    color: white;
-    font-size: 2rem;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 60px;
-    text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.add-recipe-btn:hover {
-    background-color: #e65100;
-    transform: scale(1.1);
-}
